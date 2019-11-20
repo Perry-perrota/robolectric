@@ -9,9 +9,10 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 
 
-import static junit.framework.TestCase.assertTrue;
+import static junit.framework.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
+
 public class MainActivityTest {
     private MainActivity activity;
 
@@ -20,9 +21,11 @@ public class MainActivityTest {
         activity=Robolectric.setupActivity(MainActivity.class);
 
     }
+
     @Test
     public void validateTextViewContentTest(){
         TextView welcomeTextView=activity.findViewById(R.id.welcomeMessage);
         assertTrue("Hello World!".equals(welcomeTextView.getText().toString()));
     }
+
 }
